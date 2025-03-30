@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "hzyclientmod",
+  "version": "${version}",
+  "name": "HzyClientMod",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/hzyclientmod/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "hzy.mod.hzyclientmod.client.HzyclientmodClient"
+    ],
+    "main": [
+      "hzy.mod.hzyclientmod.Hzyclientmod"
+    ]
+  },
+  "mixins": [
+    "hzyclientmod.mixins.json",
+    {
+      "config": "hzyclientmod.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
